@@ -107,3 +107,14 @@ VAR引号不可丢，SQL优化有诀窍。
 1) B-树的关键字、索引和记录是放在一起的， B+树的非叶子节点中只有关键字和指向下一个节点的索引，记录只放在叶子节点中。
 
 2) 在B-树中，越靠近根节点的记录查找时间越快，只要找到关键字即可确定记录的存在；而B+树中每个记录的查找时间基本是一样的，都需要从根节点走到叶子节点，而且在叶子节点中还要再比较关键字。
+
+# 设置简单密码
+
+```mysql
+set global validate_password_policy=0;  
+set global validate_password_mixed_case_count=0;  
+set global validate_password_number_count=3;   
+set global validate_password_special_char_count=0;  
+set global validate_password_length=3;  
+```
+
